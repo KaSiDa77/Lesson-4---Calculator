@@ -1,0 +1,15 @@
+.container{
+    width:100px;
+    height:400px;
+    background-image:url("Random\ BG.jpeg");
+    background-size: 1500px 1000px;
+    background-repeat:no-repeat;
+}
+.number, .operator{
+    width:75px;
+    height:75px;
+    font-size:5px;
+}
+.number:active, .operator:active{
+font-size:15px;
+}
