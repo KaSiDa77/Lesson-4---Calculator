@@ -1,6 +1,6 @@
 .container{
     width:100px;
-    height:400px;
+    height:600px;
     background-image:url("Random\ BG.jpeg");
     background-size: 1500px 1000px;
     background-repeat:no-repeat;
@@ -10,6 +10,32 @@
     height:75px;
     font-size:5px;
 }
+
 .number:active, .operator:active{
 font-size:15px;
+}
+#result{
+    height:90px;
+    background-color:bisque;
+    margin:20px;
+}
+#history{
+    height: 20px;
+    font-size:15px;
+    margin-top:10px;
+    margin-right:40px;
+    color:grey;
+    text-align:right;
+    padding:0px;
+}
+#output{
+    height:60px;
+    font-size:30px;
+    margin-top: 0;
+    margin-right:30px;
+    text-align:right;
+    padding:0px;
+}
+button:nth-child(1){
+    font-weight:bold;
 }
