@@ -13,7 +13,13 @@ function printOutput(num){
     }
 }
 function printHistory(num){
+  if(num==""){
+    document.getElementById("history-value").innerText = "";
+}
+else{
     document.getElementById("history-value").innerText = num;
+}
+
 }
 function getFormattedNumber(num){
     if(num=="-"){
@@ -28,10 +34,10 @@ function reverseNumberFormat(num){
 }
 var operator=document.getElementsByClassName("operator")
 for(i=0 ;i<operator.length; i++){
-    operator[i].addEventListener('click',function(){
+    operator[i].addEventListener("click",function(){
         if(this.id=="clear"){
-            printHistory()
-            printOutput()
+            printHistory("")
+            printOutput("")
         }
         else if(this.id=="backspace"){
             var output=reverseNumberFormat(getOutput()).toString();
@@ -43,13 +49,13 @@ for(i=0 ;i<operator.length; i++){
           else{
             var output=getOutput();
             var history=getHistory();
-            if(output==""&&history!=""){
+            if(output===""&&history!=""){
               if(isNaN(history[history.length-1])){
                 history= history.substr(0,history.length-1);
               }
             }
             if(output!="" || history!=""){
-              output= output==""?output:reverseNumberFormat(output);
+              output= output===""?output:reverseNumberFormat(output);
               history=history+output;
               if(this.id=="="){
                 var result=eval(history);
